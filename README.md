@@ -10,6 +10,14 @@ export OTEL_RESOURCE_ATTRIBUTES=service.name=petclinic-app
 java -javaagent:otel.jar -jar target/*.jar
 ```
 
+##Auto instrumentation using lightstep
+```
+export LS_ACCESS_TOKEN=your-token
+export LS_SERVICE_NAME=service-name
+java -javaagent:path/to/lightstep-opentelemetry-javaagent-0.16.0.jar \
+     -jar <app_name>.jar
+```
+
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
 
